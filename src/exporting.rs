@@ -42,7 +42,7 @@ impl ExportMode {
         lame.set_quality(3).unwrap();
         lame.set_channels(2).unwrap();
         lame.set_sample_rate(sample_rate as u32).unwrap();
-        lame.set_kilobitrate(128).unwrap();
+        lame.set_kilobitrate(320).unwrap();
         lame.init_params().unwrap();
         let mut out = vec![0u8; (5 * data.len()) / 4 + 7200];
         let (left, right): (Vec<(usize, i16)>, Vec<(usize, i16)>) = data
